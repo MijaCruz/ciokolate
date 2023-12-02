@@ -11,7 +11,7 @@ import DarkMode from './DarkMode.vue'
         <div class="flex items-center ml-5">
 
             <a href="../index.html" class="cursor-pointer">
-                <img src="../assets/favicon/favicon-ciokolate.png" alt="CIOKOLATE"
+                <img src="../assets/icon/favicon-ciokolate.png" alt="CIOKOLATE"
                     class="w-20">
             </a>
 

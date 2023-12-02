@@ -1,8 +1,31 @@
-<script setup>
-$("#submit").click(function(){
-    var datas = $("#form-register").serialize()
-    console.log(datas)
-});
+<script >
+import Firebase from 'firebase';
+import config from './../config.js';
+
+let app = Firebase.initializeApp(config);
+let db = app.database();
+db.ref('websites');
+let websitesRef = db.ref('websites')
+
+export default  {
+
+  name: 'App',
+
+  firebase: {
+    websites: 'websitesRef'
+  },
+
+  data(){
+    return{
+        newWebsite:{
+            name: '',
+            author:'',
+            url:''
+        }
+    }
+  }
+}
+
 
 </script>
 
@@ -12,7 +35,7 @@ $("#submit").click(function(){
 </main>
 <div>
     <!-- action="../php/register.php" method="post" -->
-    <form class="flex justify-center" id="form-register">
+    <form class="flex justify-center">
 
         <div class=" grid grid-cols-1 py-2">
 
@@ -123,8 +146,7 @@ $("#submit").click(function(){
                             peer-[:not(:placeholder-shown)]:text-ciokolate-negro">Email</label>
             </div>
 
-            <!-- INPUT SITIO WEB / LINKEDLN -->
-
+            <!-- BUTTON REGISTRARSE -->
             <div class="flex justify-center my-3">
                 <button type="submit" name="enviar" id="submit" value="Registrarse"
                     class="p-2 bg-ciokolate-rosa text-ciokolate-blanco
