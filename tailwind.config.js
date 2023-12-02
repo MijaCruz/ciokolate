@@ -53,8 +53,10 @@ export default {
         'ciovainilla-100': '#FFF5D6',
         'ciovainilla-200': '#FFEBA7',
         'ciovainilla-300': '#FFE285',
+        'ciovainilla-400': '#FFD95C',
         'ciovainilla-800': '#B88D00',
         'ciovainilla-900': '#8F6D00',
+        'ciovainilla-950': '#664E00',
       
       }
     },

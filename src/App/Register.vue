@@ -1,17 +1,15 @@
 <script setup>
 
-
-
 // Cabecera de la pagina web
 import Header from './../components/Header.vue';
 
 //Import del formulario de registro
 //import Form from './components/Form.vue'
-
+/*
 import Firebase from 'firebase';
 import config from './../config.js';
 
-
+*/
 </script>
 
 <!-- HTML5-->
@@ -19,8 +17,6 @@ import config from './../config.js';
   <main class="">
 
     <Header></Header>
-
-
 
     <div class="section">
 		<div class="container">
@@ -38,42 +34,49 @@ import config from './../config.js';
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 
-								<div class="card-front bg-ciorubor-200 bg-[url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg')]">
+                                <!-- INGRESAR -->
+								<div class="card-front bg-[url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg')]
+                                        bg-ciorubor-200 dark:bg-ciorubor-900"
+                                        id="card-login">
 									<div class="center-wrap">
 										<div class="section text-center">
 
-											<h4 class="mb-4 pb-3 text-cionegro">Ingresa</h4>
+											<h4 class="mb-4 pb-3 text-cionegro dark:text-cioblanco">Inicia sesión</h4>
 
-                                            <!-- Input log-id-->
-											<div class="form-group">
+                                            <form>
 
-												<input type="text" name="log-id" id="log-id" placeholder="Dni" autocomplete="off" 
-                                                    class="px-5 py-3 pl-14 w-full h-12 rounded
-                                                        font-medium text-base leading-5 outline-none
-                                                        bg-ciovainilla-100 text-cionegro
-                                                        transition ease-in-out duration-200
-                                                        focus:shadow-lg active:shadow-lg">
+                                                <!-- INPUT log-id-->
+                                                <div class="form-group">
+                                                    <input type="text" name="log-id" id="log-id" placeholder="Dni" autocomplete="off" maxlength="8"
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-postcard pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>	
 
-												<i class="uil uil-postcard pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
-
-											</div>	
-
-											<a  href="#" 
+                                                <!-- BTN ACCEDER -->
+                                                <a  href="#" 
                                                 class="nav-link mt-4 rounded px-7 justify-center ">
-                                                <span 
-                                                    class="text-base font-semibold uppercase tracking-wider
-                                                        rounded px-3 py-2
-                                                        transition ease-in-out duration-100
-                                                        bg-ciovainilla-300 text-ciorubor-900
-                                                        hover:bg-ciorubor-900 hover:text-ciovainilla-300 hover:shadow">enviar</span>
-                                            </a>
+                                                    <span 
+                                                        class="text-base font-semibold uppercase tracking-wider
+                                                            rounded px-3 py-2
+                                                            transition ease-in-out duration-100
+                                                            bg-ciovainilla-300 text-ciorosa-900 
+                                                            hover:bg-ciorosa-800 hover:text-ciovainilla-200 hover:shadow
+                                                            dark:hover:bg-ciovainilla-400 dark:hover:text-ciorosa-700">acceder</span>
+                                                </a>
+
+                                            </form>
                                             
                                             <!-- Forgot password -->
                             				<p class="mb-0 mt-4 text-center ">
                                                 <a href="#0" class="nav-link">
-                                                    <span class="text-md font-semibold  transition ease-in-out duration-150
-                                                            decoration-0 hover:decoration-1 hover:underline
-                                                            text-ciocrema-700 hover:text-cionegro">Olvidaste tu usuario</span>
+                                                    <span class="text-md font-semibold  transition ease-in-out duration-150 decoration-0 
+                                                            text-ciocrema-700 hover:text-cionegro
+                                                            dark:text-ciocrema-200 dark:hover:text-cioblanco">Olvidaste tu usuario</span>
                                                 </a>
                                             </p>
 
@@ -81,47 +84,90 @@ import config from './../config.js';
 			      					</div>
 			      		        </div>
 
-								<div class="card-back bg-ciorubor-200 bg-[url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg')]">
+                                <!-- REGISTRAR -->
+								<div class="card-back bg-[url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg')]
+                                        bg-ciorubor-200 dark:bg-ciorubor-900"
+                                        id="card-register">
 									<div class="center-wrap">
 										<div class="section text-center">
 
-											<h4 class="mb-4 pb-3 text-cionegro">Registrate</h4>
+											<h4 class="mb-4 pb-3 text-cionegro dark:text-cioblanco">Registrate</h4>
 
-                                            <!-- Input log-id -->
-											<div class="form-group mt-2">
-												<input type="text" name="log-id" class="form-style" placeholder="Dni" id="log-id" autocomplete="off">
-												<i class="input-icon uil uil-postcard"></i>
-											</div>	
+                                            <form>
 
-                                            <!-- Input log-name -->
-											<div class="form-group mt-1">
-												<input type="text" name="log-name" class="form-style" placeholder="Nombres" id="log-name" autocomplete="off">
-												<i class="input-icon uil uil-user"></i>
-											</div>
+                                                <!-- INPUT log-id -->
+                                                <div class="form-group my-2">
+                                                    <input type="text" name="log-id" id="log-id" placeholder="Dni" autocomplete="off" maxlength="8"
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-postcard pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>
 
-                                            <!-- Input log-lastname -->
-											<div class="form-group mt-1">
-												<input type="text" name="log-lastname" class="form-style" placeholder="Apellidos" id="log-lastname" autocomplete="off">
-												<i class="input-icon uil uil-user"></i>
-											</div>
+                                                <!-- INPUT log-name -->
+                                                <div class="form-group my-2">
+                                                    <input type="text" name="log-name" id="log-name" placeholder="Nombres" autocomplete="off" 
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-user pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>
 
-                                            <!-- Input log-phone -->
-											<div class="form-group mt-1">
-												<input type="text" name="log-phone" class="form-style" placeholder="Teléfono" id="log-phone" autocomplete="off">
-												<i class="input-icon uil uil-phone-alt"></i>
-											</div>
+                                                <!-- INPUT log-lastname -->
+                                                <div class="form-group my-2">
+                                                    <input type="text" name="log-lastname" id="log-lastname" placeholder="Apellidos" autocomplete="off" 
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-user pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>
 
-                                            <!-- Input log-email -->
-											<div class="form-group mt-1">
-												<input type="email" name="log-email" class="form-style" placeholder="Email" id="log-email" autocomplete="off">
-												<i class="input-icon uil uil-envelope-alt"></i>
-											</div>
+                                                <!-- INPUT log-phone -->
+                                                <div class="form-group my-2">
+                                                    <input type="text" name="log-phone" id="log-phone" placeholder="Teléfono" autocomplete="off" 
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-phone-alt pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>
 
-                                            <!-- Input log-addres -->
-											<div class="form-group mt-1">
-												<input type="text" name="log-addres" class="form-style" placeholder="Dirección" id="log-addres" autocomplete="off">
-												<i class="input-icon uil uil-user"></i>
-											</div>
+                                                <!-- INPUT log-email -->
+                                                <div class="form-group my-2">
+                                                    <input type="email" name="log-email" id="log-email" placeholder="Email" autocomplete="off" 
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-envelope-alt pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>
+
+                                                <!-- INPUT log-addres -->
+                                                <div class="form-group my-2">
+                                                    <input type="text" name="log-addres" id="log-addres" placeholder="Dirección" autocomplete="off" 
+                                                        class="px-5 py-3 pl-14 w-full h-12 rounded
+                                                            font-medium text-base leading-5 outline-none
+                                                            transition ease-in-out duration-200
+                                                            focus:shadow-lg active:shadow-lg
+                                                            bg-ciovainilla-100 text-cionegro
+                                                            dark:shadow-grey-300">
+                                                    <i class="uil uil-home pr-2 absolute top-2 left-4 h-12 text-xl text-left text-ciovainilla-900"></i>
+                                                </div>
+
+                                            </form>
 
 											<a  href="#" 
                                                 class="nav-link mt-4 rounded px-7 justify-center ">
@@ -154,6 +200,8 @@ import config from './../config.js';
 
 <script>
 
+
+
 /*
 let app = Firebase.initializeApp(config);
 let db = app.database();
@@ -176,7 +224,30 @@ export default  {
   }
 }
 
+
+
+const checkbox = document.querySelector('input[type="checkbox"]');
+
+checkbox.addEventListener('change', function() {
+  const checkboxStyles = '[type="checkbox"]:checked, [type="checkbox"]:not(:checked) { position: absolute; left: -9999px; }';
+  
+  if (this.checked) {
+    document.styleSheets[0].insertRule(checkboxStyles, 0);
+  } else {
+    const styleSheet = document.styleSheets[0];
+    const rules = styleSheet.cssRules || styleSheet.rules;
+    
+    for (let i = 0; i < rules.length; i++) {
+      if (rules[i].cssText === checkboxStyles) {
+        styleSheet.deleteRule(i);
+        break;
+      }
+    }
+  }
+});
+
 */
+
 </script>
 
 
@@ -261,7 +332,6 @@ body{
 .card-front, .card-back {
   width: 100%;
   height: 100%;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
