@@ -3,13 +3,7 @@
 // Cabecera de la pagina web
 import Header from './../components/Header.vue';
 
-//Import del formulario de registro
-//import Form from './components/Form.vue'
-/*
-import Firebase from 'firebase';
-import config from './../config.js';
 
-*/
 </script>
 
 <!-- HTML5-->
@@ -98,6 +92,7 @@ import config from './../config.js';
                                                 <!-- INPUT log-id -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-id" id="log-id" placeholder="Dni" autocomplete="off" maxlength="8"
+                                                        v-model="newUser.id"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -110,6 +105,7 @@ import config from './../config.js';
                                                 <!-- INPUT log-name -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-name" id="log-name" placeholder="Nombres" autocomplete="off" 
+                                                        v-model="newUser.name"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -122,6 +118,7 @@ import config from './../config.js';
                                                 <!-- INPUT log-lastname -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-lastname" id="log-lastname" placeholder="Apellidos" autocomplete="off" 
+                                                        v-model="newUser.lastname"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -134,6 +131,7 @@ import config from './../config.js';
                                                 <!-- INPUT log-phone -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-phone" id="log-phone" placeholder="Teléfono" autocomplete="off" 
+                                                        v-model="newUser.phone"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -146,6 +144,7 @@ import config from './../config.js';
                                                 <!-- INPUT log-email -->
                                                 <div class="form-group my-2">
                                                     <input type="email" name="log-email" id="log-email" placeholder="Email" autocomplete="off" 
+                                                        v-model="newUser.email"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -158,6 +157,7 @@ import config from './../config.js';
                                                 <!-- INPUT log-addres -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-addres" id="log-addres" placeholder="Dirección" autocomplete="off" 
+                                                        v-model="newUser.addres"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -169,7 +169,7 @@ import config from './../config.js';
 
                                             </form>
 
-											<a  href="#" 
+											<button  href="#" type="submit"
                                                 class="nav-link mt-4 rounded px-7 justify-center ">
                                                 <span 
                                                     class="text-base font-semibold uppercase tracking-wider
@@ -177,7 +177,7 @@ import config from './../config.js';
                                                         transition ease-in-out duration-100
                                                         bg-ciovainilla-300 text-ciorubor-900
                                                         hover:bg-ciorubor-900 hover:text-ciovainilla-300 hover:shadow">enviar</span>
-                                            </a>
+                                            </button>
 				      					</div>
 			      					</div>
 			      				</div>
@@ -192,61 +192,35 @@ import config from './../config.js';
 	</div>
 |
   </main>
-
-
-
 </template>
 
 
 <script>
 
-
-
-/*
+import Firebase from 'firebase';
+import config from './../config.js';
 let app = Firebase.initializeApp(config);
 let db = app.database();
-let websitesRef = db.ref('websites');
+let usersRef = db.ref('users');
 
-export default  {
-  name: 'App',
-  firebase: {
-    websites: 'websitesRef'
-  },
-
-  data(){
-    return{
-        newWebsite:{
-            name: '',
-            author:'',
-            url:''
+export default {
+    name: 'App',
+    firebase: {
+        users:usersRef
+    },
+    data(){
+        return{
+            newUser:{
+                id:'',
+                name:'',
+                lastname:'',
+                phone:'',
+                email:'',
+                addres:''
+            }
         }
     }
-  }
 }
-
-
-
-const checkbox = document.querySelector('input[type="checkbox"]');
-
-checkbox.addEventListener('change', function() {
-  const checkboxStyles = '[type="checkbox"]:checked, [type="checkbox"]:not(:checked) { position: absolute; left: -9999px; }';
-  
-  if (this.checked) {
-    document.styleSheets[0].insertRule(checkboxStyles, 0);
-  } else {
-    const styleSheet = document.styleSheets[0];
-    const rules = styleSheet.cssRules || styleSheet.rules;
-    
-    for (let i = 0; i < rules.length; i++) {
-      if (rules[i].cssText === checkboxStyles) {
-        styleSheet.deleteRule(i);
-        break;
-      }
-    }
-  }
-});
-
-*/
 
 </script>
 

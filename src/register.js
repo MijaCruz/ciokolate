@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import './style.css'
 import Register from './App/Register.vue'
 
-import firebase from 'firebase'
+import Vuefire from 'vuefire';
+Vue.use(Vuefire);
 
 import 'tailwindcss/tailwind.css';
 import './assets/css/bootstrap.min.css'
