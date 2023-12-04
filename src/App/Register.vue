@@ -3,7 +3,6 @@
 // Cabecera de la pagina web
 import Header from './../components/Header.vue';
 
-
 </script>
 
 <!-- HTML5-->
@@ -92,7 +91,6 @@ import Header from './../components/Header.vue';
                                                 <!-- INPUT log-id -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-id" id="log-id" placeholder="Dni" autocomplete="off" maxlength="8"
-                                                        v-model="newUser.id"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -105,7 +103,6 @@ import Header from './../components/Header.vue';
                                                 <!-- INPUT log-name -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-name" id="log-name" placeholder="Nombres" autocomplete="off" 
-                                                        v-model="newUser.name"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -118,7 +115,6 @@ import Header from './../components/Header.vue';
                                                 <!-- INPUT log-lastname -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-lastname" id="log-lastname" placeholder="Apellidos" autocomplete="off" 
-                                                        v-model="newUser.lastname"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -131,7 +127,6 @@ import Header from './../components/Header.vue';
                                                 <!-- INPUT log-phone -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-phone" id="log-phone" placeholder="Teléfono" autocomplete="off" 
-                                                        v-model="newUser.phone"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -144,7 +139,6 @@ import Header from './../components/Header.vue';
                                                 <!-- INPUT log-email -->
                                                 <div class="form-group my-2">
                                                     <input type="email" name="log-email" id="log-email" placeholder="Email" autocomplete="off" 
-                                                        v-model="newUser.email"
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -157,7 +151,7 @@ import Header from './../components/Header.vue';
                                                 <!-- INPUT log-addres -->
                                                 <div class="form-group my-2">
                                                     <input type="text" name="log-addres" id="log-addres" placeholder="Dirección" autocomplete="off" 
-                                                        v-model="newUser.addres"
+                                                        
                                                         class="px-5 py-3 pl-14 w-full h-12 rounded
                                                             font-medium text-base leading-5 outline-none
                                                             transition ease-in-out duration-200
@@ -196,7 +190,7 @@ import Header from './../components/Header.vue';
 
 
 <script>
-
+/*
 import Firebase from 'firebase';
 import config from './../config.js';
 let app = Firebase.initializeApp(config);
@@ -221,7 +215,7 @@ export default {
         }
     }
 }
-
+*/
 </script>
 
 

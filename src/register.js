@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
+
 import Register from './App/Register.vue'
 
 import Vuefire from 'vuefire';

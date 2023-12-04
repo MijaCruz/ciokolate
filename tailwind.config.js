@@ -54,14 +54,18 @@ export default {
         'ciovainilla-200': '#FFEBA7',
         'ciovainilla-300': '#FFE285',
         'ciovainilla-400': '#FFD95C',
+        'ciovainilla-500': '#FFCF33',
+        'ciovainilla-600': '#FFC60A',
         'ciovainilla-800': '#B88D00',
         'ciovainilla-900': '#8F6D00',
         'ciovainilla-950': '#664E00',
       
+      },
+      fontFamily:{
+        cookie:['Cookie display']
       }
     },
   },
 
   plugins: [],
 }
-

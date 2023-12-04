@@ -38,7 +38,7 @@ const changeDarkMode = () => {
 </script>
 
 <template>
-    <button class="font-semibold py-2 px-4 rounded-full bg-cionegro text-cioblanco w-20 dark:bg-ciorosa-200 dark:text-ciorosa-900"
-    @click="changeDarkMode"><span id="modeTheme">Oscuro</span>
+    <button class="text-center font-semibold py-2 px-4 rounded-full bg-cionegro text-cioblanco w-24 dark:bg-ciorosa-200 dark:text-ciorosa-900"
+        @click="changeDarkMode"><span id="modeTheme">Oscuro</span>
     </button>
 </template>

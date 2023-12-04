@@ -8,5 +8,4 @@ import './assets/css/bootstrap.min.css'
 import './assets/js/bootstrap.bundle.min.js'
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 
-
 createApp(App).mount('#app')
