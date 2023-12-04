@@ -11,6 +11,9 @@ export default() => {
         messagingSenderId: "76337160695",
         appId: "1:76337160695:web:3fb8f0cadd93f0ca648ef2",
         measurementId: "G-T5BDCQKDVP"
-    };
+      };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
 
 };

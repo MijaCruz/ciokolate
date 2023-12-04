@@ -3,8 +3,8 @@ import './style.css'
 
 import Register from './App/Register.vue'
 
-import Vuefire from 'vuefire';
-Vue.use(Vuefire);
+//import Vuefire from 'vuefire';
+//Vue.use(Vuefire);
 
 import 'tailwindcss/tailwind.css';
 import './assets/css/bootstrap.min.css'

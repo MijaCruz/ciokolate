@@ -69,7 +69,7 @@ import Header from './../components/Header.vue';
                                     <div class="mx-2 text-center">
                                         <div class="row justify-content-center">
                                             <div class="col offset-3 mb-2 mx-auto mt-3">
-                                                <img src="./../assets/img/carta/bebida_fria/smoothie_frutos.jpg" alt="Cheesecake de fresa" class="rounded shadow-lg grayscale-[20%] hover:grayscale-0 mx-auto w-40">
+                                                <img src="./../assets/img/carta/bebida_fria/smoothie_bosque.jpg" alt="Cheesecake de fresa" class="rounded shadow-lg grayscale-[20%] hover:grayscale-0 mx-auto w-40">
                                             </div>
                                         </div>
                                         <h4 class="font-cookie text-cionegro dark:text-cioblanco">Smoothies</h4>
@@ -85,7 +85,7 @@ import Header from './../components/Header.vue';
                                     <div class="mx-2 text-center">
                                         <div class="row justify-content-center">
                                             <div class="col offset-3 mb-2 mx-auto mt-3">
-                                                <img src="./../assets/img/carta/bebida_caliente|/latte_cafe.jpg" alt="Cheesecake de fresa" class="rounded shadow-lg grayscale-[20%] hover:grayscale-0 mx-auto w-40">
+                                                <img src="./../assets/img/carta/bebida_caliente/latte.jpg" alt="Cheesecake de fresa" class="rounded shadow-lg grayscale-[20%] hover:grayscale-0 mx-auto w-40">
                                             </div>
                                         </div>
                                         <h4 class="font-cookie text-cionegro dark:text-cioblanco">Calientes</h4>
